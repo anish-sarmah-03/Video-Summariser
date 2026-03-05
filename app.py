@@ -18,8 +18,8 @@ if API_KEY:
     genai.configure(api_key=API_KEY)
 
 
-st.set_page_config(page_title="Video Summariser AI Agent", page_icon="📺", layout="wide")
-st.title("📺 Video Summariser AI Agent")
+st.set_page_config(page_title="Video Summarizer AI Agent", page_icon="📺", layout="wide")
+st.title("📺 Video Summarizer AI Agent")
 
 #header
 st.markdown(
@@ -45,7 +45,7 @@ with st.sidebar:
 @st.cache_data
 def initialize_agent():
     return Agent(
-        name="Video Summariser Agent",
+        name="Video Summarizer Agent",
         model=Gemini(id="gemini-3.1-flash-lite-preview"),
         tools=[DuckDuckGo()],
         markdown=True,
